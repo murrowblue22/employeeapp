@@ -1,27 +1,17 @@
 import classes from './style.module.scss'
 import Image from 'next/image'
+import { IPersonData } from '../../utils/model'
 
 import personIcon from '../../../../public/assets/imgs/avatars/person.jpg'
 
 const { infoBtnCntr, btnAvatarSection, btnAvatarCntr, btnAvatar } = classes
 const { btnInfoSection, btnInfoCntr, btnInfo } = classes
 
-interface IPersonInfo {
-    profilePath: string
-    name: string
-    age: string
-    city: string
 
-} 
 
-export default function PersonInfoBtn({ value }:{ value: string }) {
+export default function PersonInfoBtn({ value, id }:{ value: IPersonData, id: number }) {
 
-    const tempPerson: IPersonInfo = {
-        profilePath: '../../../../public/assets/imgs/avatars/person.jpg',
-        name: 'jane doe',
-        age: '31', 
-        city: 'New York'
-    }
+    
 
     return (
         <li className={infoBtnCntr} >
@@ -29,7 +19,7 @@ export default function PersonInfoBtn({ value }:{ value: string }) {
                 <section className={btnAvatarSection}>
                     <picture className={btnAvatarCntr}>
                         {/* <Image className={btnAvatar} src={tempPerson.profilePath} alt="Person Image icon" /> */}
-                        <img className={btnAvatar} src='assets/imgs/avatars/person.jpg' alt="Person Image icon" />
+                        <img className={btnAvatar} src={value.picture.thumbnail} alt="Person Image icon" />
                     </picture>
                 </section>
                 <section className={btnInfoSection}>
@@ -39,7 +29,7 @@ export default function PersonInfoBtn({ value }:{ value: string }) {
                                 <span>Name: </span>
                             </label>
                             <div>
-                                <span>{tempPerson.name}</span>
+                                <span>{`${value.name.first} ${value.name.last}`}</span>
                             </div>
                         </div>
                         <div className={btnInfo}>
@@ -47,7 +37,7 @@ export default function PersonInfoBtn({ value }:{ value: string }) {
                                 <span>Age: </span>
                             </label>
                             <div>
-                                <span>{tempPerson.age}</span>
+                                <span>{`${value.dob.age}`}</span>
                             </div>
                         </div>
                         <div className={btnInfo}>
@@ -55,7 +45,7 @@ export default function PersonInfoBtn({ value }:{ value: string }) {
                                 <span>City: </span>
                             </label>
                             <div>
-                                <span>{tempPerson.city}</span>
+                                <span>{value.location.city}</span>
                             </div>
                         </div>
                     </div>

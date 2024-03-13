@@ -1,13 +1,21 @@
 
 import PersonInfoBtn from '../components/PersonInfoBtn'
+import { IPersonData } from '../utils/model'
 
 import classes from './style.module.scss'
 
 const { homeCntr, homeHdr, homeCnt, peopleListCntr } = classes
 
-const peopleList: string[] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+//const peopleList: string[] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
-export default function Home({}:{}) {
+
+
+export default async function Home({}:{}) {
+    const incList = 'picture,dob,name,location,email,phone'
+
+    const dataRes = await fetch(`https://randomuser.me/api/?page=1&results=10&nat=us&seed=fdempl7f432f8f87&inc=${incList}`)
+    const data = await dataRes.json()
+    const peopleList = data.results as IPersonData[]
 
     return (
         <main className={homeCntr}>
@@ -20,7 +28,7 @@ export default function Home({}:{}) {
                 <ul className={peopleListCntr}>
                     {
                         peopleList.map((val, index) => 
-                            <PersonInfoBtn key={index} value={val} />
+                            <PersonInfoBtn key={`person_${index}`} value={val} id={index} />
                         )
                     }
                 </ul>

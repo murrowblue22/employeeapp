@@ -25,6 +25,10 @@
             transform: translateY(1px);
         }
 
+        &:hover {
+            cursor: pointer;
+        }
+
         .btnAvatarSection {
             position: relative;
             display: flex;
