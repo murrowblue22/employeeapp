@@ -1,0 +1,86 @@
+
+.rootContainer {
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 102.4rem;
+    min-height: 100vh;
+    
+    // box-shadow: 0px 3rem 3px -2px rgba(0, 0, 0, 0.2), 
+    //             0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+    //             0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+    
+    border-radius: .4rem;
+    margin: 0 auto; 
+
+    .header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 7.2rem;
+        
+        .profileCntr {
+            position: relative;
+            display: flex;
+            width: 4rem;
+            height: 4rem;
+            margin: .8rem;
+
+            .profileAvatar {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: fill;
+            }
+        } 
+        
+        .appCreatorInfo {
+            position: relative; 
+            display: flex; 
+            flex-direction: column;
+
+            .appInfo {
+                font-weight: bold;
+                font-size: 1.8rem;
+                color: #222032
+            }
+
+            .creatorInfo {
+                font-size: 1.2rem;
+                color: #5b586e;
+            }
+        }
+    }
+
+    .mainSection {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        box-shadow: 0rem .3rem .3rem -.2rem rgba(0, 0, 0, 0.2), 
+                    0rem .3rem .4rem 0rem rgba(0, 0, 0, 0.14),
+                    0rem .1rem .8rem 0rem rgba(0, 0, 0, 0.12);
+
+     
+        .mainSectionHdr {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 12.8rem;
+            background-color: #fff;
+            font-size: 2.4rem;
+        }
+
+        .mainSectionCnt {
+            position: relative; 
+            display: flex;
+            flex-direction: column;
+            padding: 1.6rem;
+            flex: 1;
+            
+        }
+    }
+}

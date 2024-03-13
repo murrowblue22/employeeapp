@@ -1,0 +1,39 @@
+
+
+.homeCntr {
+    position: relative; 
+    display: flex; 
+    flex-direction: column;
+    flex: 1;
+
+    .homeHdr {
+        position: relative; 
+        display: flex; 
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 5.6rem;
+        border-bottom: .1rem solid #3A9FC0;
+        font-size: 1.6rem;
+        color: #5b586e;
+        font-weight: bold;
+    }
+
+    .homeCnt {
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        margin-top: 1.6rem;
+        padding: 1.6rem;
+        flex: 1;
+        background-color: #fff;
+
+        .peopleListCntr {
+            position: relative; 
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+    }
+}
