@@ -4,6 +4,7 @@
     position: relative; 
     display: flex; 
     flex-direction: column;
+    min-height: 100vh;
     flex: 1;
 
     .homeHdr {
@@ -26,15 +27,21 @@
         margin-top: 1.6rem;
         padding: 1.6rem;
         flex: 1;
+        min-height: 100vh;
         background-color: #fff;
 
         .peopleListCntr {
             position: relative; 
             display: flex;
-            height: 44.8rem;
+            flex: 1;
+           
             justify-content: center;
             list-style: none;
             flex-wrap: wrap;
+
+            @media (min-width: 640px) {
+                height: 44.8rem;
+            }
         }
     }
 }
