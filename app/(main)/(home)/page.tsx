@@ -6,9 +6,6 @@ import classes from './style.module.scss'
 
 const { homeCntr, homeHdr, homeCnt, peopleListCntr } = classes
 
-//const peopleList: string[] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-
-
 
 export default async function Home({}:{}) {
     const incList = 'picture,dob,name,location,email,phone'

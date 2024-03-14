@@ -1,0 +1,32 @@
+
+
+.detailCntr {
+    position: relative; 
+    display: flex; 
+    flex-direction: column;
+    flex: 1;
+
+    .detailHdr {
+        position: relative; 
+        display: flex; 
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 5.6rem;
+        border-bottom: .1rem solid #3A9FC0;
+        font-size: 1.8rem;
+        color: #5b586e;
+        font-weight: bold;
+    }
+
+    .detailCnt {
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 1.6rem;
+        padding: 3.2rem 1.6rem;
+        flex: 1;
+        background-color: #fff;
+    }
+}

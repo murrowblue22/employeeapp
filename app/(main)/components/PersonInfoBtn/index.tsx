@@ -18,7 +18,6 @@ export default function PersonInfoBtn({ value, id }:{ value: IPersonData, id: nu
             <button>
                 <section className={btnAvatarSection}>
                     <picture className={btnAvatarCntr}>
-                        {/* <Image className={btnAvatar} src={tempPerson.profilePath} alt="Person Image icon" /> */}
                         <img className={btnAvatar} src={value.picture.thumbnail} alt="Person Image icon" />
                     </picture>
                 </section>

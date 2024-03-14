@@ -1,6 +1,6 @@
 export type Tdob = {
     date: string
-    age: string
+    age: number
 } 
 
 export type Tid = {

@@ -1,0 +1,108 @@
+
+
+.detailCntr {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 35.2rem; 
+    height: 52.8rem;
+    border-radius: 1.6rem;
+    border: 1px solid #dde1ec;
+    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+
+    .detailCntrHdr {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: .4rem .8rem;
+        height: 3.2rem;
+        
+        .btnArrowCntr {
+            position: relative;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            border: none;
+            //transform: translateY(.4rem);
+            box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+
+            &:active {
+                box-shadow: 0 0px 1px rgba(0, 0, 0, 0.4);
+                transform: translateY(.1rem);
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+        
+            .btnArrowIcon {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transform: translateX(-.1rem);
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    .personAvatarSection {
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: .8rem;
+
+        .personAvatarCntr {
+            position: relative;
+            width: 8.8rem;
+            height: 8.8rem;
+            
+            .personAvatar {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: fill;
+            }
+
+        }
+    }
+
+    .personInfoSection {
+        position: relative;
+        display: flex;
+        flex: 1;
+        padding: .8rem 2.4rem;
+
+        .infoLabelCntr {
+            position: relative; 
+            display: flex;
+            flex-direction: column;
+
+            label {
+                position: relative;
+                margin: .8rem;
+                font-weight: bold;
+            }
+
+        }
+
+        .infoValueCntr {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding-left: 1.6rem;
+
+            div {
+                position: relative;
+                margin: .8rem;
+                color: #5b586e;
+            }
+
+        }
+    }
+}
