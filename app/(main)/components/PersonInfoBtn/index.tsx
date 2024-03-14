@@ -1,8 +1,7 @@
 import classes from './style.module.scss'
-import Image from 'next/image'
+import Link from 'next/link'
 import { IPersonData } from '../../utils/model'
 
-import personIcon from '../../../../public/assets/imgs/avatars/person.jpg'
 
 const { infoBtnCntr, btnAvatarSection, btnAvatarCntr, btnAvatar } = classes
 const { btnInfoSection, btnInfoCntr, btnInfo } = classes
@@ -12,10 +11,9 @@ const { btnInfoSection, btnInfoCntr, btnInfo } = classes
 export default function PersonInfoBtn({ value, id }:{ value: IPersonData, id: number }) {
 
     
-
     return (
         <li className={infoBtnCntr} >
-            <button>
+            <Link href={`/${id}`}>
                 <section className={btnAvatarSection}>
                     <picture className={btnAvatarCntr}>
                         <img className={btnAvatar} src={value.picture.thumbnail} alt="Person Image icon" />
@@ -49,7 +47,7 @@ export default function PersonInfoBtn({ value, id }:{ value: IPersonData, id: nu
                         </div>
                     </div>
                 </section>
-            </button>
+            </Link>
         </li>
     )
 }

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import backArrowIcon from '../../../../public/assets/icons/back_arrow_icon.svg'
 
 import classes from './style.module.scss'
@@ -9,45 +10,14 @@ const { personInfoSection, infoLabelCntr, infoValueCntr } = classes
 
 import { IPersonData } from "../../utils/model";
 
-export default function PersonDetail({} : {}) {
-
-    const value: IPersonData = {
-        dob: {
-            date: '1961-03-18T19:45:20.818Z',
-            age: 62
-        }, 
-        email: 'donald.hansen@example.com',
-        location: {
-            city: 'Moscow',
-            coordinates: {
-                latitude: '-35.2593',
-                longitude: '-152.5767'
-            },
-            country: 'United States',
-            postcode: 27751, 
-            state: 'Iowa', 
-            street: {number: 4241, name: 'W Belt Line Rd'},
-            timezone: {offset: '+5:30', description: 'Bombay, Calcutta, Madras, New Delhi' }
-        }, 
-        name: {
-            title: 'Mr', 
-            first: 'Donald', 
-            last: 'Hansen'
-        }, 
-        phone: '(744) 324-8454', 
-        picture: {
-            large: 'https://randomuser.me/api/portraits/men/69.jpg', 
-            medium: 'https://randomuser.me/api/portraits/med/men/69.jpg', 
-            thumbnail: 'https://randomuser.me/api/portraits/thumb/men/69.jpg'
-        }
-    }
+export default function PersonDetail({ value }:{ value: IPersonData}) {
 
     return (
         <section className={detailCntr}> 
             <header className={detailCntrHdr}>
-               <button className={btnArrowCntr}>
+               <Link href='/' className={btnArrowCntr}>
                     <Image className={btnArrowIcon} src={backArrowIcon} alt="back arrow icon" />
-               </button>
+               </Link>
             </header>
             <section className={personAvatarSection}>
                 <picture className={personAvatarCntr}>

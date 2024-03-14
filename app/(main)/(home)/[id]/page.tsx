@@ -1,20 +1,18 @@
-
-
-
 import PersonDetail from '../../components/PersonDetail'
-// import { IPersonData } from '../utils/model'
+import { IPersonData } from '../../utils/model'
 
 import classes from './style.module.scss'
 
 const { detailCntr, detailHdr,  detailCnt} = classes
 
 
-export default async function Detail({}:{}) {
+export default async function Detail({ params } : { params: any}) {
+
     const incList = 'picture,dob,name,location,email,phone'
 
-    // const dataRes = await fetch(`https://randomuser.me/api/?page=1&results=10&nat=us&seed=fdempl7f432f8f87&inc=${incList}`)
-    // const data = await dataRes.json()
-    // const peopleList = data.results as IPersonData[]
+    const dataRes = await fetch(`https://randomuser.me/api/?page=1&results=10&nat=us&seed=fdempl7f432f8f87&inc=${incList}`)
+    const data = await dataRes.json()
+    const peopleList = data.results as IPersonData[]
 
     return (
         <main className={detailCntr}>
@@ -24,7 +22,7 @@ export default async function Detail({}:{}) {
                 </h1>
             </header>
             <section className={detailCnt}>
-                <PersonDetail />
+                <PersonDetail value={peopleList[params.id]}/>
             </section>
         </main>
     )

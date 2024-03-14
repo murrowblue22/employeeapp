@@ -8,6 +8,7 @@ const { homeCntr, homeHdr, homeCnt, peopleListCntr } = classes
 
 
 export default async function Home({}:{}) {
+
     const incList = 'picture,dob,name,location,email,phone'
 
     const dataRes = await fetch(`https://randomuser.me/api/?page=1&results=10&nat=us&seed=fdempl7f432f8f87&inc=${incList}`)
